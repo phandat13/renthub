@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: renthub-db
+    environment:
+      POSTGRES_DB: renthub
+      POSTGRES_USER: renthub
+      POSTGRES_PASSWORD: renthub
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U renthub"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  pgdata:

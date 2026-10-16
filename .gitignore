@@ -1,0 +1,23 @@
+# Backend Build Outputs
+backend/target/
+backend/uploads/
+HELP.md
+
+# IDE & Editor files
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.classpath
+.project
+.settings/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Env & OS
+.env
+*.local
+.DS_Store
