@@ -10,7 +10,7 @@ public final class SecurityUtils {
 
     // The current logged-in user or empty if the user is a guest
     // Used for public endpoints that need to know who is viewing
-    public static Optional<UserPrincipal> getCurrentUser() {
+    public static Optional<UserPrincipal> currentUser() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();;
         if (auth != null && auth.getPrincipal() instanceof UserPrincipal principal) {
             return Optional.of(principal);
