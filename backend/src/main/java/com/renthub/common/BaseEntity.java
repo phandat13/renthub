@@ -20,4 +20,8 @@ public abstract class BaseEntity {
     @CreationTimestamp
     @Column(name = "created_at", nullable = false, updatable = false, columnDefinition = "timestamptz")
     private Instant createdAt;
+
+    @UpdateTimestamp
+    @Column(name = "updated_at", nullable = false, columnDefinition = "timestamptz")
+    private Instant updatedAt;
 }
